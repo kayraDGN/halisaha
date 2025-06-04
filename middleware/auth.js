@@ -9,6 +9,8 @@ module.exports = function(req, res, next) {
     return res.status(401).json({ message: 'Yetkilendirme token\'ı bulunamadı.' });
   }
 
+
+  
   try {
     // Token'ı doğrula
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
